@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { placeSearch, nearbySearch, hotelSearch } from "../services/googleService.js";
+import { placeSearch, nearbySearch, hotelSearch } from "../services/googleservice.js";
 
 const router = Router();
 
