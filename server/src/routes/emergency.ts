@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { auth, requireAuthority } from "../middleware/auth.js";
-import { EmergencyEvent } from "../models/EmergencyEvent.js";
+import { EmergencyEvent } from "../models/emergencyevent.js";
 
 const router = Router();
 
