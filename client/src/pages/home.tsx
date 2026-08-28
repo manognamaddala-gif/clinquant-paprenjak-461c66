@@ -1635,7 +1635,7 @@ export default function Home({ view = "home" }: { view?: "home" | "destination" 
                   address: p.formattedAddress
                 }))}
               // tapping a pin computes + draws the real route to it
-              onPlaceClick={(mapPlace) => {
+              onPlaceClick={(mapPlace: any) => {
                 const original = nearby.find(
                   (p) => p.id === mapPlace.id
                 );
