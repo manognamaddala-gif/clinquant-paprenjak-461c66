@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "./store";
-import Auth from "./pages/Auth";
-import Home from "./pages/Home";
-import Authority from "./pages/Authority";
-import Profile from "./pages/Profile";
+import Auth from "./pages/auth";
+import Home from "./pages/home";
+import Authority from "./pages/authority";
+import Profile from "./pages/profile";
 
 export default function App() {
   const user=useAuth(s=>s.user);
