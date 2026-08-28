@@ -38,7 +38,7 @@ router.post("/:id/handshake", auth, async (req: any, res) => {
   if (![lat,lng].every(Number.isFinite)) return res.status(400).json({ message: "Real location required" });
   const event = await EmergencyEvent.create({ userId: req.user._id, journeyId: req.params.id, type: "UNRESPONSIVE_HANDSHAKE", trigger: trigger || "GUARDIAN_HANDSHAKE", escalationLevel: 2, responseStatus: "PENDING", location: { type: "Point", coordinates: [lng,lat] }, metadata: { battery, online } });
   req.app.get("io").to("authority").emit("emergency:new", event);
-  const contact = (await import("../models/User.js")).User.findById(req.user._id).select("name email trustedContact");
+  const contact = (await import("../models/user.js")).User.findById(req.user._id).select("name email trustedContact");
   const u:any = await contact;
   const notification = await notifyTrustedContact({ eventId:event._id, type:event.type, trigger:event.trigger, tourist:{name:u?.name,email:u?.email}, trustedContact:u?.trustedContact, location:{lat,lng}, timestamp:event.createdAt });
   await EmergencyEvent.findByIdAndUpdate(event._id,{ metadata:{ battery, online, trustedContactNotification:notification } });
