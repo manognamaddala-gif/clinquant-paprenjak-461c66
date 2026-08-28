@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { auth } from "../middleware/auth.js";
-import { placeSearch, computeRoutes } from "../services/googleService.js";
+import { placeSearch, computeRoutes } from "../services/googleservice.js";
 
 const router = Router();
 
