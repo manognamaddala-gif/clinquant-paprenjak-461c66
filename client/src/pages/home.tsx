@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { api } from "../api";
 import { useAuth } from "../store";
-import MapView from "../components/mapView";
+import MapView from "../components/mapview";
 import LiveStatus from "../components/livestatus";
 import { watchLocation } from "../services/location";
 import { readBattery } from "../services/battery";
