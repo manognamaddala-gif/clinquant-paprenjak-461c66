@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { computeRoutes, nearestRoads } from "../services/googleService.js";
-import { RestrictedZone } from "../models/RestrictedZone.js";
-import { getWeather } from "../services/weatherService.js";
+import { computeRoutes, nearestRoads } from "../services/googleservice.js";
+import { RestrictedZone } from "../models/restrictedzone.js";
+import { getWeather } from "../services/weatherservice.js";
 import { decodePolyline, pointInGeometry } from "../services/polyline.js";
 
 const router = Router();
