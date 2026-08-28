@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { auth } from "../middleware/auth.js";
-import { Journey } from "../models/Journey.js";
-import { RestrictedZone } from "../models/RestrictedZone.js";
-import { EmergencyEvent } from "../models/EmergencyEvent.js";
-import { notifyTrustedContact } from "../services/notificationService.js";
+import { Journey } from "../models/journey.js";
+import { RestrictedZone } from "../models/restrictedzone.js";
+import { EmergencyEvent } from "../models/emergencyevent.js";
+import { notifyTrustedContact } from "../services/notificationservice.js";
 
 const router = Router();
 
