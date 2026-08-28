@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getWeather } from "../services/weatherService.js";
+import { getWeather } from "../services/weatherservice.js";
 
 const router = Router();
 router.get("/", async (req, res) => {
