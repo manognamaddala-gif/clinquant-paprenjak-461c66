@@ -2197,7 +2197,7 @@ export default function Home({ view = "home" }: { view?: "home" | "destination" 
                         category: stationScreen,
                         address: p.formattedAddress
                       }))}
-                    onPlaceClick={(mapPlace) => {
+                    onPlaceClick={(mapPlace: any) => {
                       const original = stationResults.find(
                         (p) => p.id === mapPlace.id
                       );
