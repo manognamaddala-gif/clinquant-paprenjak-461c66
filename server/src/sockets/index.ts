@@ -1,7 +1,7 @@
 import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
 import { env } from "../config/env.js";
-import { User } from "../models/User.js";
+import { User } from "../models/user.js";
 
 export function createSocketServer(httpServer: any) {
   const io = new Server(httpServer, { cors: { origin: env.CLIENT_URL, methods: ["GET", "POST"] } });
